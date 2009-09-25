@@ -6,7 +6,7 @@ import sys, os
 if sys.version_info <= (2, 5):
     raise SystemExit("Python 2.5 or later is required.")
 
-execfile(os.path.join("web", "extras", "xmlrpc", "release.py"))
+execfile(os.path.join("web", "extras", "rpc", "xml", "release.py"))
 
 setup(
         name = name,
@@ -28,23 +28,25 @@ setup(
         test_suite = 'nose.collector',
         
         classifiers = [
-                "Development Status :: 1 - Planning",
-                "Environment :: Console",
+                "Development Status :: 4 - Beta",
+                "Environment :: Web Environment",
                 "Framework :: YAPWF",
                 "Intended Audience :: Developers",
-                "License :: OSI Approved :: BSD License",
+                "License :: OSI Approved :: MIT License",
                 "Operating System :: OS Independent",
                 "Programming Language :: Python",
-                "Topic :: Internet :: WWW/HTTP :: WSGI",
-                "Topic :: Software Development :: Libraries :: Python Modules"
+                "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+                "Topic :: Software Development :: Libraries :: Python Modules",
+                "Topic :: Text Processing :: Markup :: XML"
             ],
         
         packages = find_packages(exclude=['tests']),
         include_package_data = True,
-        zip_safe = False,
+        zip_safe = True,
         
         namespace_packages = [
                 'web',
-                'web.extras'
+                'web.extras',
+                'web.extras.rpc'
             ]
     )
