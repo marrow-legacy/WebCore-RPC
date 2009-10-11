@@ -21,11 +21,10 @@ setup(
         license = license,
         keywords = '',
         
-        install_requires = [
-                'YAPWF'
-            ],
+        install_requires = ['YAPWF'],
         
         test_suite = 'nose.collector',
+        tests_require = ['PyAMF'],
         
         classifiers = [
                 "Development Status :: 4 - Beta",
