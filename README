@@ -1,9 +1,7 @@
-An XML remote procedure call controller interface for YAPWF.
+An XML remote procedure call controller interface for WebCore.
 
 HTTP is often used as a communication medium for a variety of dialects.  The WWW dialect (files over HTTP) is by far the most common and widely understood.  Others exist, including a number of RPC - remote procedure call - dialects that allow software systems to communicate with each other.  XML-RPC is an example of this; a flexible system with introspection features that uses large blocks of XML to pass messages between disparate systems.
 
-JSON-RPC is a more light-weight remote procedure call system, and is supported the YAPWF-JSONRPC package.
+A (mostly) proprietary RPC system, AMF, is a binary format used to communicate with ActionScript, Flex, and Flash, all products from Adobe.  It has the benefit of extreme performance.
 
-A (mostly) proprietary RPC system, AMF, is a binary format used to communicate with ActionScript, Flex, and Flash, all products from Adobe.  It has the benefit of extreme performance.  (See YAPWF-AMF.)
-
-Slightly less practical, as there is nothing will supports it except YAPWF for now, is B-RPC.  It uses a modified Bencoding algorithm (the same algorithm used by Bittorrent to store metadata) and is more efficient than XML-RPC, but less efficient than AMF.
+Slightly less practical, as there is nothing will supports it except WebCore for now, is B-RPC.  It uses a modified Bencoding algorithm (the same algorithm used by Bittorrent to store metadata) and is more efficient than XML-RPC, but less efficient than AMF.

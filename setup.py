@@ -1,12 +1,17 @@
 #!/usr/bin/env python
 
-from setuptools import setup, find_packages
 import sys, os
+
+from distribute_setup import use_setuptools
+use_setuptools()
+
+from setuptools import setup, find_packages
 
 if sys.version_info <= (2, 5):
     raise SystemExit("Python 2.5 or later is required.")
 
 execfile(os.path.join("web", "extras", "rpc", "xml", "release.py"))
+
 
 setup(
         name = name,
@@ -21,7 +26,7 @@ setup(
         license = license,
         keywords = '',
         
-        install_requires = ['YAPWF'],
+        install_requires = ['WebCore'],
         
         test_suite = 'nose.collector',
         tests_require = ['PyAMF'],
