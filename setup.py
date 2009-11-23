@@ -2,8 +2,12 @@
 
 import sys, os
 
-from distribute_setup import use_setuptools
-use_setuptools()
+try:
+    from distribute_setup import use_setuptools
+    use_setuptools()
+
+except ImportError:
+    pass
 
 from setuptools import setup, find_packages
 

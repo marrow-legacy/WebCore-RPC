@@ -2,7 +2,7 @@
 """Release information about WebCore-RPC."""
 
 name = "WebCore-RPC"
-version = "0.1"
+version = "0.5"
 
 summary = "XML-RPC and AMF controller interfaces for WebCore."
 description = """"""
