@@ -1,5 +1,5 @@
 # encoding: utf-8
-"""Release information about YAPWF-XMLRPC."""
+"""Release information about WebCore-RPC."""
 
 name = "WebCore-RPC"
 version = "0.1"
