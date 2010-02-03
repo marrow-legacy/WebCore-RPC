@@ -25,9 +25,10 @@ except ImportError:
 
 class AMFController(Dialect):
     __context__ = pyamf.AMF0
+    __gateway__ = dict()
     
     def __init__(self):
-        self._gateway = pyamf.remoting.gateway.BaseGateway()
+        self._gateway = pyamf.remoting.gateway.BaseGateway(logger=log, *self.__gateway__)
         self._context = pyamf.get_context(self.__context__)
     
     def __call__(self, request):
